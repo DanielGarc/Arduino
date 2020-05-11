@@ -20,9 +20,10 @@
 
 #ifndef wificlientlightbearssl_h
 #define wificlientlightbearssl_h
+#if defined(USE_MQTT_TLS) || defined(USE_SENDMAIL)
 #include <vector>
 #include "WiFiClient.h"
-#include <t_bearssl.h>
+#include <bearssl.h>
 
 namespace BearSSL
 {
@@ -226,4 +227,5 @@ private:
 
 }; // namespace BearSSL
 
+#endif // USE_MQTT_TLS
 #endif // wificlientlightbearssl_h
